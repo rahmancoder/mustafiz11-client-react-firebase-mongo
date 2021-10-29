@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from './Components/NotFound/NotFound';
 import Home from './Components/Home/Home';
+import Vacation from './Components/Vacation/Vacation';
 
 function App() {
   return (
@@ -16,12 +17,17 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          {/* <Route path="/vacation">
+            <Vacation></Vacation>
+          </Route> */}
           <Route path="/tourism">
 
           </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
+
+
         </Switch>
 
       </Router>
