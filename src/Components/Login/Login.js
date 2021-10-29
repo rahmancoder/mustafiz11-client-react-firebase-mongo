@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 
@@ -14,32 +15,24 @@ const Login = () => {
     //     handleLogout
     // } = useFirebase();
 
-    const { handleGoogleLogin,
+    const {
+        signInUsingGoogle,
+        // handleGoogleLogin,
         user,
         handleLogout
     } = useAuth();
 
 
-    // const handleGoogleSignIn = () => {
-    //     signInWithPopup(auth, googleProvider)
-    //         .then(result => {
-    //             const user = result.user;
-    //             console.log(user);
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
 
-
-    //             const { displayName, email, photoURL } = result.user;
-    //             const loggedInUser = {
-    //                 name: displayName,
-    //                 email: email,
-    //                 photo: photoURL
-    //             };
-    //             setUser(loggedInUser);
-    //         })
-    //         .catch(error => {
-    //             console.log(error.message);
-    //         })
-    // }
-
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri);
+            })
+    }
 
 
     return (
