@@ -1,17 +1,23 @@
 import React from 'react';
+import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
+    // const { handleGoogleLogin,
+    //     user,
+    //     //     handleResetPassword,
+    //     //     verifyEmail,
+    //     //     setUserName,
+    //     //     registerNewUser,
+    //     //     processLogin,
+    //     // handleGoogleSignIn,
+    //     handleLogout
+    // } = useFirebase();
+
     const { handleGoogleLogin,
         user,
-        //     handleResetPassword,
-        //     verifyEmail,
-        //     setUserName,
-        //     registerNewUser,
-        //     processLogin,
-        // handleGoogleSignIn,
         handleLogout
-    } = useFirebase();
+    } = useAuth();
 
 
     // const handleGoogleSignIn = () => {

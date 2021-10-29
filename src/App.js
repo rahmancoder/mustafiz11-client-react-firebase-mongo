@@ -14,75 +14,78 @@ import ManageAllBooking from './Components/ManageAllBooking/ManageAllBooking';
 import AddTravelBlog from './Components/AddTravelBlog/AddTravelBlog';
 import TravelList from './Components/TravelList/TravelList';
 import SingleTravelListInfo from './Components/SingleTravelListInfo/SingleTravelListInfo';
+import AuthProvider from './Context/AuthProvider';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
   return (
     <div className="App">
 
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          {/* <Route path="/vacation">
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            {/* <Route path="/vacation">
             <Vacation></Vacation>
           </Route> */}
-          {/* <Route path="/tourism">
+            {/* <Route path="/tourism">
 
           </Route> */}
 
-          <Route path="/travel">
-            <TravelList></TravelList>
+            <Route path="/travel">
+              <TravelList></TravelList>
 
-          </Route>
-          <Route path="/travelbooking/:travelId">
-            <SingleTravelListInfo></SingleTravelListInfo>
-
-
-          </Route>
-
-          <Route path="/login">
-            <Login></Login>
-
-          </Route>
-          <Route path="/admin">
-            <AdminDashboard></AdminDashboard>
-
-          </Route>
-          <Route path="/mybooking">
-            <MyBooking></MyBooking>
-
-          </Route>
-          <Route path="/manageallbooking">
-            <ManageAllBooking></ManageAllBooking>
-
-          </Route>
-          <Route path="/addtravelblog">
-            <AddTravelBlog></AddTravelBlog>
-
-          </Route>
+            </Route>
+            <Route path="/travelbooking/:travelId">
+              <SingleTravelListInfo></SingleTravelListInfo>
 
 
-          {/* <Route path="/map">
+            </Route>
+
+            <Route path="/login">
+              <Login></Login>
+
+            </Route>
+            <Route path="/admin">
+              <AdminDashboard></AdminDashboard>
+
+            </Route>
+            <Route path="/mybooking">
+              <MyBooking></MyBooking>
+
+            </Route>
+            <Route path="/manageallbooking">
+              <ManageAllBooking></ManageAllBooking>
+
+            </Route>
+            <Route path="/addtravelblog">
+              <AddTravelBlog></AddTravelBlog>
+
+            </Route>
+
+
+            {/* <Route path="/map">
             <MyMap></MyMap>
           </Route> */}
 
 
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
 
 
-        </Switch>
+          </Switch>
 
-        <Footer></Footer>
+          <Footer></Footer>
 
-      </Router>
+        </Router>
+      </AuthProvider>
 
     </div>
   );
