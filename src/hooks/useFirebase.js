@@ -20,6 +20,7 @@ const useFirebase = () => {
 
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
+
     const [loading, setLoading] = useState(true)
 
     // const handleGoogleLogin = () => {
@@ -38,27 +39,47 @@ const useFirebase = () => {
             .finally(() => { setLoading(false) });
     }
 
+    // useEffect(() => {
+    //     onAuthStateChanged(auth, (user) => {
+    //         if (user) {
+    //             setUser(user);
+    //             // const uid = user.uid;
+    //         } else {
+    //             // User is signed out
+    //             // ...
+    //         }
+    //     });
+    // }, []);
+
+
+
+    // observe whether user auth state changed or not
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                // const uid = user.uid;
-            } else {
-                // User is signed out
-                // ...
             }
+            else {
+                setUser({});
+            }
+            setLoading(false);
         });
-    }, []);
+        return () => unsubscribe;
+    }, [])
+
 
     const handleLogout = () => {
+        setLoading(true);
         signOut(auth)
             .then(() => {
                 setUser({});
             })
             .catch((err) => {
                 console.log(err);
-            });
+            })
+            .finally(() => setLoading(false))
     };
+
 
 
     return {
