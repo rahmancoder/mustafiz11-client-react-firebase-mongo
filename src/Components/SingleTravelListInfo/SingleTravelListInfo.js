@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const SingleTravelListInfo = () => {
     let { travelId } = useParams();
@@ -32,6 +33,11 @@ const SingleTravelListInfo = () => {
             <h2 className="text-warning">About This Service- {traveldetails[travelId]?.travel_description}</h2>
             <img src={traveldetails[travelId]?.picture} alt="" />
 
+            <div>
+                <Link to='/confirmbooking'>
+                    <Button variant="warning">Book Your Travel</Button>
+                </Link>
+            </div>
 
             <div className="text-center">
                 <h1> Travel List</h1>
@@ -39,6 +45,7 @@ const SingleTravelListInfo = () => {
                 <p><Link to="/travel">View All TravelList</Link></p>
 
             </div>
+
 
         </div>
     );

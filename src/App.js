@@ -16,6 +16,7 @@ import TravelList from './Components/TravelList/TravelList';
 import SingleTravelListInfo from './Components/SingleTravelListInfo/SingleTravelListInfo';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -43,17 +44,24 @@ function App() {
               <TravelList></TravelList>
 
             </Route>
-            {/* <Route path="/travelbooking/:travelId">
+            <Route path="/travelbooking/:travelId">
               <SingleTravelListInfo></SingleTravelListInfo>
 
 
-            </Route> */}
+            </Route>
 
-            <PrivateRoute path="/travelbooking/:travelId">
+
+            {/* <PrivateRoute path="/travelbooking/:travelId">
               <SingleTravelListInfo></SingleTravelListInfo>
 
 
-            </PrivateRoute>
+            </PrivateRoute> */}
+
+
+            <Route path="/confirmbooking">
+              <ConfirmBooking></ConfirmBooking>
+
+            </Route>
 
             <Route path="/login">
               <Login></Login>

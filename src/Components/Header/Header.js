@@ -31,7 +31,7 @@ const Header = () => {
                             <Link className="m-2 text-decoration-none text-light" to="/admin">AdminDashboard</Link>
 
                         ) : (
-                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
+                            <Link to="/admin" className="header-items m-2 text-decoration-none text-light">
                                 AdminDashboard
                             </Link>
                         )}
