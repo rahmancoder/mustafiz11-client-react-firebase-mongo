@@ -2,7 +2,7 @@ import React from 'react';
 import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
-    const { signInUsingGoogle,
+    const { handleGoogleLogin,
         user,
         //     handleResetPassword,
         //     verifyEmail,
@@ -10,7 +10,7 @@ const Login = () => {
         //     registerNewUser,
         //     processLogin,
         // handleGoogleSignIn,
-        logOut
+        handleLogout
     } = useFirebase();
 
 
@@ -40,11 +40,11 @@ const Login = () => {
         <div>
             {!user.email ?
                 <div>
-                    <button onClick={signInUsingGoogle}>Google Sign In</button>
+                    <button onClick={handleGoogleLogin}>Google Sign In</button>
                     {/* <button onClick={handleGithubSignIn}>Github Sign In</button> */}
                     {/* <button onClick={handleFacebookSignIn}>Facebook Sign In</button> */}
                 </div> :
-                <button onClick={logOut}>Sign Out</button>
+                <button onClick={handleLogout}>Sign Out</button>
             }
             <br />
 

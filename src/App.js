@@ -9,6 +9,9 @@ import Login from './Components/Login/Login';
 import AdminDashboard from './Components/AdminDashboard/AdminDashboard';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import MyBooking from './Components/MyBooking/MyBooking';
+import ManageAllBooking from './Components/ManageAllBooking/ManageAllBooking';
+import AddTravelBlog from './Components/AddTravelBlog/AddTravelBlog';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -39,6 +42,20 @@ function App() {
             <AdminDashboard></AdminDashboard>
 
           </Route>
+          <Route path="/mybooking">
+            <MyBooking></MyBooking>
+
+          </Route>
+          <Route path="/manageallbooking">
+            <ManageAllBooking></ManageAllBooking>
+
+          </Route>
+          <Route path="/addtravelblog">
+            <AddTravelBlog></AddTravelBlog>
+
+          </Route>
+
+
           {/* <Route path="/map">
             <MyMap></MyMap>
           </Route> */}

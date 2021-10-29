@@ -1,11 +1,12 @@
+import initializeFirebaseAuthentication from '../Firebase/Firebase.init';
 import {
     getAuth,
     signInWithPopup,
     GoogleAuthProvider,
+    onAuthStateChanged,
     signOut,
-    onAuthStateChanged
+
 } from "firebase/auth";
-import initializeFirebaseAuthentication from "../Firebase/Firebase.init";
 
 import { useState, useEffect } from 'react';
 
@@ -14,49 +15,51 @@ initializeFirebaseAuthentication();
 
 
 const useFirebase = () => {
-    const [user, setUser] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
-
     const auth = getAuth();
+    const provider = new GoogleAuthProvider();
 
-    const signInUsingGoogle = () => {
-        setIsLoading(true);
-        const googleProvider = new GoogleAuthProvider();
+    const [user, setUser] = useState({});
+    const [error, setError] = useState("");
 
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
                 setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
-    }
 
-    // observe user state change
+                // console.log(result.user);
+                setError("");
+            })
+            .catch((error) => setError(error.message));
+    };
+
     useEffect(() => {
-        const unsubscribed = onAuthStateChanged(auth, user => {
+        onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+                const uid = user.uid;
+            } else {
+                // User is signed out
+                // ...
             }
-            else {
-                setUser({})
-            }
-            setIsLoading(false);
         });
-        return () => unsubscribed;
-    }, [])
+    }, []);
 
-    const logOut = () => {
-        setIsLoading(true);
+    const handleLogout = () => {
         signOut(auth)
-            .then(() => { })
-            .finally(() => setIsLoading(false));
-    }
+            .then(() => {
+                setUser({});
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
 
     return {
+        handleGoogleLogin,
         user,
-        isLoading,
-        signInUsingGoogle,
-        logOut
-    }
+        handleLogout,
+    };
 }
 
 export default useFirebase;
