@@ -15,6 +15,7 @@ import AddTravelBlog from './Components/AddTravelBlog/AddTravelBlog';
 import TravelList from './Components/TravelList/TravelList';
 import SingleTravelListInfo from './Components/SingleTravelListInfo/SingleTravelListInfo';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -42,11 +43,17 @@ function App() {
               <TravelList></TravelList>
 
             </Route>
-            <Route path="/travelbooking/:travelId">
+            {/* <Route path="/travelbooking/:travelId">
               <SingleTravelListInfo></SingleTravelListInfo>
 
 
-            </Route>
+            </Route> */}
+
+            <PrivateRoute path="/travelbooking/:travelId">
+              <SingleTravelListInfo></SingleTravelListInfo>
+
+
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>
