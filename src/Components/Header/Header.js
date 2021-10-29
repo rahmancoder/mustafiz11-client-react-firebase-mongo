@@ -15,6 +15,7 @@ const Header = () => {
                     <Nav className="me-5 p-2 text-center">
                         <Button className="bg-warning"><Link className="m-2 text-decoration-none" to="/home">Home</Link> </Button>
                         <Link className="m-2 text-decoration-none text-light" to="/tourism">Tourism Spot</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/travel">Travel Now</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/gallery">Gallery</Link>
 
                         {/* Admin Dashboard with CRUD operation , let's Design and Implement first next we will take this

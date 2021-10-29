@@ -12,6 +12,8 @@ import Footer from './Components/Footer/Footer';
 import MyBooking from './Components/MyBooking/MyBooking';
 import ManageAllBooking from './Components/ManageAllBooking/ManageAllBooking';
 import AddTravelBlog from './Components/AddTravelBlog/AddTravelBlog';
+import TravelList from './Components/TravelList/TravelList';
+import SingleTravelListInfo from './Components/SingleTravelListInfo/SingleTravelListInfo';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -33,6 +35,16 @@ function App() {
           {/* <Route path="/tourism">
 
           </Route> */}
+
+          <Route path="/travel">
+            <TravelList></TravelList>
+
+          </Route>
+          <Route path="/travelbooking/:travelId">
+            <SingleTravelListInfo></SingleTravelListInfo>
+
+
+          </Route>
 
           <Route path="/login">
             <Login></Login>
