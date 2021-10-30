@@ -16,11 +16,11 @@ const ConfirmBooking = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('/mustafiztravel.json', data)
-            // axios.post('http://localhost:5000/booking', data)
+        // axios.post('/mustafiztravel.json', data)
+        axios.post('http://localhost:5000/booking', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('added successfully');
+                    alert(' Booking added successfully');
                     reset();
                 }
             })
@@ -35,14 +35,14 @@ const ConfirmBooking = () => {
             <div className="add-booking">
                 <h2>Please Confirm Your Booking</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input style={{ height: '10vh' }} {...register("name", { required: true, maxLength: 20 })} placeholder="Destination" />
+                    <input style={{ height: '10vh' }} {...register("DestinationName", { required: true, maxLength: 20 })} placeholder="Destination" />
                     <textarea style={{ height: '10vh' }} {...register("description")} placeholder="Any Extra Query about the Journey?" />
                     <input style={{ height: '5vh' }} type="number" {...register("price")} placeholder="Travel Cost" defaultValue="2000" />
-                    <input style={{ height: '5vh' }} {...register("img")} placeholder="User Email" defaultValue={user?.email} />
+                    <input style={{ height: '5vh' }} {...register("userEmail")} placeholder="User Email" defaultValue={user?.email} />
                     <input className="bg-danger text-light" type="submit" />
                 </form>
             </div>
-            <Button className="mx-2" variant="dark"> <Link className="m-2 text-decoration-none text-light" to="/admin">AdminDashboard</Link></Button>
+            <Button className="mt-5 mx-2" variant="dark"> <Link className="m-2 text-decoration-none text-light" to="/admin">AdminDashboard</Link></Button>
 
         </div>
     );
