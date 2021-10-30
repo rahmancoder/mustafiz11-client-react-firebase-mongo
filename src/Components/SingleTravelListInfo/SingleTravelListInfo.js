@@ -8,7 +8,8 @@ const SingleTravelListInfo = () => {
     const [traveldetails, setTravelDetails] = useState([]);
 
     useEffect(() => {
-        fetch('/mustafiztravel.json')
+        // fetch('/mustafiztravel.json')
+        fetch('http://localhost:5000/travel')
             .then(res => res.json())
             // .then(data => console.log(data))
             .then(data => setTravelDetails(data))
@@ -29,7 +30,8 @@ const SingleTravelListInfo = () => {
         <div className="text-center">
             <h2 className="text-danger">Service Index: {travelId}</h2>
 
-            <h2 className="text-success">Service Name: {traveldetails[travelId]?.Travel_destination}</h2>
+            <h2 className="text-success">Service Name: {traveldetails[travelId]?.Travel_destination
+            }</h2>
             <h2 className="text-warning">About This Service- {traveldetails[travelId]?.travel_description}</h2>
             <img src={traveldetails[travelId]?.picture} alt="" />
 

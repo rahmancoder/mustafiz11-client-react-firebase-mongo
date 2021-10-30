@@ -3,13 +3,13 @@ import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SingleTravelList = (props) => {
-    const { index, picture, travel_destination, travel_cost } = props.travel || {};
+    const { index, picture, Travel_destination, travel_cost } = props.travel || {};
     return (
         <div className="col-md-4 mt-4">
             <Card style={{ width: '18rem', height: '100%' }}>
                 <Card.Img variant="top" src={picture} />
                 <Card.Body>
-                    <Card.Title><span className="text-warning"> Destination-</span> {travel_destination}</Card.Title>
+                    <Card.Title><span className="text-warning"> Destination-</span> {Travel_destination}</Card.Title>
                     <Card.Text>
 
 
