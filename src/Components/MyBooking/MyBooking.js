@@ -8,7 +8,7 @@ import useAuth from '../../hooks/useAuth';
 
 const MyBooking = () => {
 
-    // const { user } = useAuth();
+    const { user } = useAuth();
     const [myallbooking, setMyallbooking] = useState([]);
 
     useEffect(() => {
@@ -16,8 +16,19 @@ const MyBooking = () => {
             .then((res) => res.json())
             .then((data) => setMyallbooking(data));
 
-        // if (data.userEmail == user?.email)
+
     }, []);
+
+
+    //  This will work with Firebase Authentication and then it will filter out from there
+    // useEffect(() => {
+
+    //     // if (data.userEmail == user?.email)
+    //     const found = myallbooking.filter(d => d.userEmail == user?.email)
+    //     console.log('found', found);
+
+
+    // }, [user.email])
 
 
     // DELETE A Privious My Booking
@@ -25,6 +36,7 @@ const MyBooking = () => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
             const url = `http://localhost:5000/booking/${id}`;
+            // const url = `http://localhost:5000/mybooking/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

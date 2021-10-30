@@ -35,7 +35,7 @@ const SingleTravelListInfo = () => {
             <h2 className="text-warning">About This Service- {traveldetails[travelId]?.travel_description}</h2>
             <img src={traveldetails[travelId]?.picture} alt="" />
 
-            <div>
+            <div className="mt-3">
                 <Link to='/confirmbooking'>
                     <Button variant="warning">Book Your Travel</Button>
                 </Link>
