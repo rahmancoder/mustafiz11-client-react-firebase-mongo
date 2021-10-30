@@ -15,6 +15,26 @@ const MyBooking = () => {
     }, []);
 
 
+    // DELETE A Privious My Booking
+    const handleDeleteUser = id => {
+        const proceed = window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/booking/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remainingbooking = myallbooking.filter(data => data._id !== id);
+                        setMyallbooking(remainingbooking);
+                    }
+                });
+        }
+    }
+
+
 
     return (
         <div className="container">
@@ -38,7 +58,8 @@ const MyBooking = () => {
                             <td>{pd?.DestinationName}</td>
                             <td>{pd?.userEmail}</td>
                             <td>{pd?.description}</td>
-                            <button className="btn bg-warning">Delete</button>
+                            {/* <button className="btn bg-warning">Delete</button> */}
+                            <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button>
                         </tr>
                     </tbody>
                 ))}
