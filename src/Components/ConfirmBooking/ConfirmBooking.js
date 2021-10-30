@@ -3,10 +3,13 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import useAuth from '../../hooks/useAuth';
 
 import './ConfirmBooking.css';
 
 const ConfirmBooking = () => {
+
+    const { user } = useAuth();
 
     const { register, handleSubmit, reset } = useForm();
 
@@ -14,6 +17,7 @@ const ConfirmBooking = () => {
         console.log(data);
 
         axios.post('/mustafiztravel.json', data)
+            // axios.post('http://localhost:5000/booking', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -34,7 +38,7 @@ const ConfirmBooking = () => {
                     <input style={{ height: '10vh' }} {...register("name", { required: true, maxLength: 20 })} placeholder="Destination" />
                     <textarea style={{ height: '10vh' }} {...register("description")} placeholder="Any Extra Query about the Journey?" />
                     <input style={{ height: '5vh' }} type="number" {...register("price")} placeholder="Travel Cost" defaultValue="2000" />
-                    <input style={{ height: '5vh' }} {...register("img")} placeholder="User Email" />
+                    <input style={{ height: '5vh' }} {...register("img")} placeholder="User Email" defaultValue={user?.email} />
                     <input className="bg-danger text-light" type="submit" />
                 </form>
             </div>

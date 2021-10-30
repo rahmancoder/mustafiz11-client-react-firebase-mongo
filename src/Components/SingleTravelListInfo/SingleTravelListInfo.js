@@ -29,7 +29,7 @@ const SingleTravelListInfo = () => {
         <div className="text-center">
             <h2 className="text-danger">Service Index: {travelId}</h2>
 
-            <h2 className="text-success">Service Name: {traveldetails[travelId]?.travel_destination}</h2>
+            <h2 className="text-success">Service Name: {traveldetails[travelId]?.Travel_destination}</h2>
             <h2 className="text-warning">About This Service- {traveldetails[travelId]?.travel_description}</h2>
             <img src={traveldetails[travelId]?.picture} alt="" />
 

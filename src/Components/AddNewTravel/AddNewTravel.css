@@ -1,0 +1,16 @@
+.add-travel{
+    margin: 5px 5px;
+    padding: 10px;
+    /* height: 10vh; */
+}
+.add-travel form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-travel form input, textarea{
+    width: 60%;
+    /* height: 10vh; */
+    margin-bottom: 10px;
+}

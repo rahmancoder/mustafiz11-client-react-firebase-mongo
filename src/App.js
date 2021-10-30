@@ -17,6 +17,7 @@ import SingleTravelListInfo from './Components/SingleTravelListInfo/SingleTravel
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
+import AddNewTravel from './Components/AddNewTravel/AddNewTravel';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -81,6 +82,11 @@ function App() {
             </Route>
             <Route path="/addtravelblog">
               <AddTravelBlog></AddTravelBlog>
+
+            </Route>
+
+            <Route path="/addtravel">
+              <AddNewTravel></AddNewTravel>
 
             </Route>
 

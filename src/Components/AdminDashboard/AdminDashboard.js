@@ -16,6 +16,8 @@ const AdminDashboard = () => {
             <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/mybooking">MyBooking</Link></Button>
             <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/manageallbooking">Manage ALL Booking</Link></Button>
 
+            <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/addtravel">Add Travel to Home Page </Link></Button>
+
             <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/addtravelblog">Add Travel Blog</Link></Button>
 
 
