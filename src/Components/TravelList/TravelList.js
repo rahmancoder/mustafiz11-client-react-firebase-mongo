@@ -23,7 +23,8 @@ const TravelList = () => {
                 <div className="row m-3">
 
                     {
-                        travellist.slice(0, 6).map(travel =>
+                        // travellist.slice(0, 9).map(travel =>
+                        travellist.map(travel =>
                             <SingleTravelList
                                 key={travel.index}
                                 travel={travel}

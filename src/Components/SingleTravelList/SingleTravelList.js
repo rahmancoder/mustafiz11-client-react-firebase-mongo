@@ -15,7 +15,7 @@ const SingleTravelList = (props) => {
 
                         {/* <span className="text-info"> About Doctor:-</span> : {about} */}
                     </Card.Text>
-                    <Card.Title><span className="text-danger font-weight-bold"> Travel Cost-</span> {travel_cost}</Card.Title>
+                    <Card.Title><span className="text-danger font-weight-bold"> Travel Cost-</span> {travel_cost} $</Card.Title>
                     <Link to={`/travelbooking/${index}`}>
                         <Button variant="info">Add to Travel</Button>
                     </Link>

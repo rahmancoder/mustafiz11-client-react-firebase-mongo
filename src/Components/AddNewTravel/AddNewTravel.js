@@ -31,10 +31,10 @@ const AddNewTravel = () => {
             <div className="add-travel">
                 <h2>Please Add a New Travel List</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input style={{ height: '10vh' }} {...register("name", { required: true, maxLength: 20 })} placeholder="Travel Destination" />
-                    <textarea style={{ height: '10vh' }} {...register("description")} placeholder="Travel Description and Information" />
-                    <input style={{ height: '5vh' }} type="number" {...register("price")} placeholder="Travel Cost" />
-                    <input style={{ height: '5vh' }} {...register("img")} placeholder="Destination image url" />
+                    <input style={{ height: '10vh' }} {...register("Travel_destination", { required: true, maxLength: 20 })} placeholder="Travel Destination" />
+                    <textarea style={{ height: '10vh' }} {...register("travel_description")} placeholder="Travel Description and Information" />
+                    <input style={{ height: '5vh' }} type="number" {...register("travel_cost")} placeholder="Travel Cost" />
+                    <input style={{ height: '5vh' }} {...register("picture")} placeholder="Destination image url" />
                     <input type="submit" />
                 </form>
             </div>
