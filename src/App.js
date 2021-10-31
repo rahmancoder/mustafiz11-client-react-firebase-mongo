@@ -52,18 +52,18 @@ function App() {
               <TravelList></TravelList>
 
             </Route>
-            <Route path="/travelbooking/:travelId">
+            {/* <Route path="/travelbooking/:travelId">
               <SingleTravelListInfo></SingleTravelListInfo>
 
 
-            </Route>
+            </Route> */}
 
 
-            {/* <PrivateRoute path="/travelbooking/:travelId">
+            <PrivateRoute path="/travelbooking/:travelId">
               <SingleTravelListInfo></SingleTravelListInfo>
 
 
-            </PrivateRoute> */}
+            </PrivateRoute>
 
 
             <Route path="/confirmbooking">

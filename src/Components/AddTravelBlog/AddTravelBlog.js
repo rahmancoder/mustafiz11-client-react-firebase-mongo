@@ -12,7 +12,7 @@ const AddTravelBlog = () => {
         console.log(data);
 
         // axios.post('http://localhost:5000/blog', data)
-        axios.post('http://localhost:5000/blog', data)
+        axios.post('https://frightening-spell-88460.herokuapp.com/blog', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -25,11 +25,11 @@ const AddTravelBlog = () => {
 
     return (
         <div>
-            <h3> Main CRUD Operation here</h3>
-            <h3> GET API , UPDATE/POST API , DELETE API </h3>
+            <h3 className="text-warning">Let's Add a Travel Blog!!</h3>
+
 
             <div className="add-blog">
-                <h2>Please Add a Service</h2>
+                <h2 className="text-warning">Please Add a Travel Blog</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input style={{ height: '10vh' }} {...register("name", { required: true, maxLength: 20 })} placeholder="Travel Blog Name" />
                     <textarea style={{ height: '10vh' }} {...register("description")} placeholder="Travel Description and Information" />

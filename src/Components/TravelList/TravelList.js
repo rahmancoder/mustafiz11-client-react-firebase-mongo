@@ -6,7 +6,8 @@ const TravelList = () => {
     const [travellist, setAlltravellist] = useState([]);
     useEffect(() => {
         // fetch('./mustafiztravel.json')
-        fetch('http://localhost:5000/travel')
+        // fetch('http://localhost:5000/travel')
+        fetch('https://frightening-spell-88460.herokuapp.com/travel')
             .then(res => res.json())
             // .then(data => console.log(data));
             .then(data => setAlltravellist(data));

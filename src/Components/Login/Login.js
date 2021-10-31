@@ -37,9 +37,10 @@ const Login = () => {
 
     return (
         <div>
+            <h1 className="text-danger mt-5 mb-5">Please Login First</h1>
             {!user.email ?
                 <div>
-                    <i class="fas fa-sign-in-alt"></i>  <button onClick={handleGoogleLogin}>Google Sign In</button>
+                    <i class="fas fa-sign-in-alt"></i>  <button className="bg-success text-light" onClick={handleGoogleLogin}>Google Sign In</button>
                     {/* <button onClick={handleGithubSignIn}>Github Sign In</button> */}
                     {/* <button onClick={handleFacebookSignIn}>Facebook Sign In</button> */}
                 </div> :

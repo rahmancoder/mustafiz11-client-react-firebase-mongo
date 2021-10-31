@@ -17,7 +17,8 @@ const ConfirmBooking = () => {
         console.log(data);
 
         // axios.post('/mustafiztravel.json', data)
-        axios.post('http://localhost:5000/booking', data)
+        // axios.post('http://localhost:5000/booking', data)
+        axios.post('https://frightening-spell-88460.herokuapp.com/booking', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert(' Booking added successfully');

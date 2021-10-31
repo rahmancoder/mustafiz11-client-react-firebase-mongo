@@ -12,7 +12,8 @@ const MyBooking = () => {
     const [myallbooking, setMyallbooking] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/booking")
+        // fetch("http://localhost:5000/booking")
+        fetch("https://frightening-spell-88460.herokuapp.com/booking")
             .then((res) => res.json())
             .then((data) => setMyallbooking(data));
         // .then((data) => {
@@ -63,9 +64,9 @@ const MyBooking = () => {
 
     return (
         <div className="container">
-            <h3>Show Indivitual User Booking Information</h3>
+            <h1 className="text-danger">Show Indivitual User Booking Information</h1>
 
-            <h1>My ALL Booking {myallbooking?.length} </h1>
+            <h1 className="text-danger">My ALL Booking {myallbooking?.length} </h1>
             {/* <h1>My ALL Booking {found?.length}</h1> */}
             <Table striped bordered hover>
                 <thead>
@@ -105,8 +106,8 @@ const MyBooking = () => {
                             <td>{pd?.DestinationName}</td>
                             <td>{pd?.userEmail}</td>
                             <td>{pd?.description}</td>
-                            <button className="btn bg-warning">Delete</button>
-                            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
+                            {/* <button className="btn bg-warning">Delete</button> */}
+                            <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button>
                         </tr>
                     </tbody>
                 ))}

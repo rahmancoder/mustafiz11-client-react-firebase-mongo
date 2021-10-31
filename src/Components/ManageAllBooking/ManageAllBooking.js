@@ -7,7 +7,8 @@ const ManageAllBooking = () => {
     const [manageallbooking, setManageallbooking] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/booking")
+        // fetch("http://localhost:5000/booking")
+        fetch("https://frightening-spell-88460.herokuapp.com/booking")
             .then((res) => res.json())
             .then((data) => setManageallbooking(data));
 
@@ -17,9 +18,9 @@ const ManageAllBooking = () => {
 
     return (
         <div className="container">
-            <h3>User email will filter the user all booking here, He can see his all Bookings/ Indivitual booking</h3>
+            <h1 className="text-danger">Let's Manage ALL Booking Here</h1>
 
-            <h1>My ALL Booking {manageallbooking?.length}</h1>
+            <h1 className="text-danger">Managed ALL Booking: {manageallbooking?.length}</h1>
             <Table striped bordered hover>
                 <thead>
                     <tr>

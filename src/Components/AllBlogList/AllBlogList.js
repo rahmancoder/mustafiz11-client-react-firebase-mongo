@@ -6,7 +6,8 @@ const AllBlogList = () => {
     const [allbloglist, setAllbloglist] = useState([]);
     useEffect(() => {
         // fetch('./mustafiztravel.json')
-        fetch('http://localhost:5000/blog')
+        // fetch('http://localhost:5000/blog')
+        fetch('https://frightening-spell-88460.herokuapp.com/blog')
             .then(res => res.json())
             // .then(data => console.log(data));
             .then(data => setAllbloglist(data));
