@@ -19,6 +19,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
 import AddNewTravel from './Components/AddNewTravel/AddNewTravel';
 import GalleryImage from './Components/GalleryImage/GalleryImage';
+import AllBlogList from './Components/AllBlogList/AllBlogList';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -95,7 +96,10 @@ function App() {
               <AddTravelBlog></AddTravelBlog>
 
             </Route>
+            <Route path="/showallblog">
+              <AllBlogList></AllBlogList>
 
+            </Route>
 
 
 
