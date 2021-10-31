@@ -80,15 +80,17 @@ function App() {
               <ManageAllBooking></ManageAllBooking>
 
             </Route>
-            <Route path="/addtravelblog">
-              <AddTravelBlog></AddTravelBlog>
-
-            </Route>
 
             <Route path="/addtravel">
               <AddNewTravel></AddNewTravel>
 
             </Route>
+            <Route path="/addtravelblog">
+              <AddTravelBlog></AddTravelBlog>
+
+            </Route>
+
+
 
 
             {/* <Route path="/map">

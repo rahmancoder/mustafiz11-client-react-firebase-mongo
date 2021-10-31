@@ -17,22 +17,64 @@ const Header = () => {
                     <Link className="m-2 text-decoration-none text-light" to="/home">Tourism Travel & Travel Information</Link>
                     <Nav className="me-5 p-2 text-center">
                         <Button className="bg-warning"><Link className="m-2 text-decoration-none" to="/home">Home</Link> </Button>
-                        <Link className="m-2 text-decoration-none text-light" to="/tourism">Tourism Spot</Link>
+
                         <Link className="m-2 text-decoration-none text-light" to="/travel">Travel Now</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/gallery">Gallery</Link>
+                        {/* 
+                        <Link className="m-2 text-decoration-none text-light" to="/mybooking">My Booking</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/addtravel">Add Travel</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/manageallbooking">Manage All Booking</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/addtravelblog">Add Blog</Link> */}
 
-                        {/* Admin Dashboard with CRUD operation , let's Design and Implement first next we will take this
-                        into our conditional rendering after login */}
-                        {/* <Link className="m-2 text-decoration-none text-light" to="/admin">AdminDashboard</Link> */}
-                        {/* <Link className="m-2 text-decoration-none text-light" to="/login">LogIn</Link> */}
-                        {/* <Link className="m-2 text-decoration-none text-light" to="/register">Register</Link> */}
+                        {user?.email ? (
+
+                            <Link className="m-2 text-decoration-none text-light" to="/mybooking">My Booking</Link>
+
+                        ) : (
+                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
+                                My Booking
+                            </Link>
+                        )}
+
+
+                        {user?.email ? (
+
+                            <Link className="m-2 text-decoration-none text-light" to="/addtravel">Add Travel</Link>
+
+                        ) : (
+                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
+                                Add Travel
+                            </Link>
+                        )}
+
+                        {user?.email ? (
+
+                            <Link className="m-2 text-decoration-none text-light" to="/manageallbooking">Manage All Booking</Link>
+
+                        ) : (
+                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
+
+                            </Link>
+                        )}
+
+                        {user?.email ? (
+
+                            <Link className="m-2 text-decoration-none text-light" to="/addtravelblog">Add Blog</Link>
+
+                        ) : (
+                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
+
+                            </Link>
+                        )}
+
+
 
                         {user?.email ? (
 
                             <Link className="m-2 text-decoration-none text-light" to="/admin">AdminDashboard</Link>
 
                         ) : (
-                            <Link to="/admin" className="header-items m-2 text-decoration-none text-light">
+                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
                                 AdminDashboard
                             </Link>
                         )}

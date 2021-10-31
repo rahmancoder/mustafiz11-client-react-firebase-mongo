@@ -39,7 +39,7 @@ const Login = () => {
         <div>
             {!user.email ?
                 <div>
-                    <button onClick={handleGoogleLogin}>Google Sign In</button>
+                    <i class="fas fa-sign-in-alt"></i>  <button onClick={handleGoogleLogin}>Google Sign In</button>
                     {/* <button onClick={handleGithubSignIn}>Github Sign In</button> */}
                     {/* <button onClick={handleFacebookSignIn}>Facebook Sign In</button> */}
                 </div> :
