@@ -13,7 +13,8 @@ const Header = () => {
         <>
             <Navbar sticky="top" bg="primary" variant="dark">
                 <Container>
-                    <Navbar.Brand href="/home"> Tourism Travel & Travel Information</Navbar.Brand>
+                    {/* <Navbar.Brand href="/home"> Tourism Travel & Travel Information</Navbar.Brand> */}
+                    <Link className="m-2 text-decoration-none text-light" to="/home">Tourism Travel & Travel Information</Link>
                     <Nav className="me-5 p-2 text-center">
                         <Button className="bg-warning"><Link className="m-2 text-decoration-none" to="/home">Home</Link> </Button>
                         <Link className="m-2 text-decoration-none text-light" to="/tourism">Tourism Spot</Link>
