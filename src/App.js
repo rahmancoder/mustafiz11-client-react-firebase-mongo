@@ -18,6 +18,7 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking';
 import AddNewTravel from './Components/AddNewTravel/AddNewTravel';
+import GalleryImage from './Components/GalleryImage/GalleryImage';
 // import MyMap from './Components/MyMap/MyMap';
 
 function App() {
@@ -34,12 +35,17 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+
+            <Route path="/gallery">
+              <GalleryImage></GalleryImage>
+            </Route>
             {/* <Route path="/vacation">
             <Vacation></Vacation>
           </Route> */}
             {/* <Route path="/tourism">
 
           </Route> */}
+
 
             <Route path="/travel">
               <TravelList></TravelList>

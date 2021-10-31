@@ -32,7 +32,7 @@ const Header = () => {
 
                         ) : (
                             <Link to="/login" className="header-items m-2 text-decoration-none text-light">
-                                My Booking
+
                             </Link>
                         )}
 
@@ -43,7 +43,7 @@ const Header = () => {
 
                         ) : (
                             <Link to="/login" className="header-items m-2 text-decoration-none text-light">
-                                Add Travel
+
                             </Link>
                         )}
 
@@ -83,7 +83,7 @@ const Header = () => {
 
                         {user?.email ? (
 
-                            <Link className="m-2 text-decoration-none text-light" to="/tourism">
+                            <Link className="m-2 text-decoration-none text-light" to="/home">
                                 <li onClick={handleLogout} className="header-items">
                                     Logout
                                 </li>
@@ -101,7 +101,7 @@ const Header = () => {
                                 </li>
                             </Link>
                         }
-                        <Link className="m-2 text-decoration-none text-light" to="/questions">FAQ</Link>
+
                         {/* <Link className="m-2" to="/notfound">Not Found</Link> */}
                     </Nav>
                 </Container>

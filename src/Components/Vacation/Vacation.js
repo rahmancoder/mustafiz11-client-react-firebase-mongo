@@ -11,6 +11,7 @@ import img5 from "../../images/vacation/sand.jpg";
 const Vacation = () => {
     return (
         <div className="container">
+            <h1 className="text-danger"> Sea Beach Images</h1>
             <div className="row g-0">
                 <div className="col-4 first-image">
                     <img src={img1} alt="" className="img-fluid" />

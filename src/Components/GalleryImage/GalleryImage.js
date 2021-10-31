@@ -9,47 +9,61 @@ import img6 from "../../images/collage/honey.jpg";
 import img7 from "../../images/collage/cactus.jpg";
 import img8 from "../../images/collage/sunglass.jpg";
 import img9 from "../../images/collage/lens.jpg";
+import img10 from "../../images/Gallery/galleryimg1.jpg";
+import img11 from "../../images/Gallery/galleryimg2.jpg";
+import img12 from "../../images/Gallery/galleryimg3.jpg";
+import img13 from "../../images/Gallery/galleryimg4.jpg";
+
 
 const GalleryImage = () => {
     return (
-        <div class="container">
-            <h1> Gallery Tour Images</h1>
-            <div class="row">
-                <div class="col-4">
-                    <div class="row mb-3">
-                        <img class="img-fluid" src={img1} alt="" />
+        <div className="container">
+            <h1 className="text-danger mt-5 mb-4"> Gallery Tour Images</h1>
+            <div className="row">
+                <div className="col-4">
+                    <div className="row mb-3">
+                        <img className="img-fluid" src={img1} alt="" />
+                        <p className="mt-4 mb-3 text-warning">Bottle</p>
                     </div>
-                    <div class="row">
-                        <img src={img2} alt="" />
+                    <div className="row">
+                        <img src={img13} alt="" />
+                        <p className="mt-4 text-warning">Hat And Sunglass</p>
                     </div>
                 </div>
                 {/* <!-- middle column --> */}
-                <div class="col-4">
-                    <div class="row mb-3">
-                        <img class="img-fluid" src={img3} alt="" />
+                <div className="col-4">
+                    <div className="row mb-3">
+                        <img className="img-fluid" src={img10} alt="" />
+                        <p className="mb-4 text-warning"> Shoe and Bags</p>
                     </div>
-                    <div class="row mb-3">
-                        <img src={img4} alt="" class="img-fluid" />
+                    <div className="row mb-3">
+                        <img src={img4} alt="" className="img-fluid" />
+                        <p className="text-warning">Lamp and Lights</p>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-6">
-                            <img src={img5} alt="" class="img-fluid" />
+                    <div className="row mb-3">
+                        <div className="col-6">
+                            <img src={img5} alt="" className="img-fluid" />
+                            <p className="mt-4 text-warning">Watch and Battery</p>
                         </div>
-                        <div class="col-6">
-                            <img src={img6} alt="" class="img-fluid" />
+                        <div className="col-6">
+                            <img src={img11} alt="" className="img-fluid" />
+                            <p className="mt-4 text-warning">Lugage</p>
                         </div>
                     </div>
                 </div>
                 {/* <!-- last column --> */}
-                <div class="col-4">
-                    <div class="row mb-3">
-                        <img class="img-fluid" src={img7} alt="" />
+                <div className="col-4">
+                    <div className="row mb-3">
+                        <img className="img-fluid" src={img12} alt="" />
+                        <p className="text-warning">Sutcase Bags and Hats</p>
                     </div>
-                    <div class="row mb-3">
-                        <img class="img-fluid" src={img8} alt="" />
+                    <div className="row mb-3">
+                        <img className="img-fluid" src={img8} alt="" />
+                        <p className="text-warning"> Black Sunglass</p>
                     </div>
-                    <div class="row mb-3">
-                        <img class="img-fluid" src={img9} alt="" />
+                    <div className="row mb-3">
+                        <img className="img-fluid" src={img9} alt="" />
+                        <p className="text-warning">Camera Lens</p>
                     </div>
                 </div>
             </div>

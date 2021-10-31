@@ -5,20 +5,20 @@ import MyBooking from '../MyBooking/MyBooking';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import adminimg from '../../images/admin/adminimg.jpg';
+
 const AdminDashboard = () => {
     return (
         <div>
-            <h2>My Orders/ My bookings</h2>
-            <h2>Manage All orders</h2>
-            <h2>Add a New Service / Add new Booking /Add new Travel blog</h2>
-            <h2>CRUD Operation must be here</h2>
+            <h2>Admin Panel and Manage Task</h2>
+            <img src={adminimg} alt="" />
 
-            <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/mybooking">MyBooking</Link></Button>
-            <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/manageallbooking">Manage ALL Booking</Link></Button>
+            <Button className="mx-2" variant="danger"> <Link className="m-2 p-5 text-decoration-none text-light" to="/mybooking">MyBooking</Link></Button>
+            <Button className="mx-2" variant="danger"> <Link className="m-2 p-5 text-decoration-none text-light" to="/manageallbooking">Manage ALL Booking</Link></Button>
 
-            <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/addtravel">Add Travel to Home Page </Link></Button>
+            <Button className="mx-2" variant="danger"> <Link className="m-2 p-5 text-decoration-none text-light" to="/addtravel">Add Travel to Home Page </Link></Button>
 
-            <Button className="mx-2" variant="danger"> <Link className="m-2 text-decoration-none text-light" to="/addtravelblog">Add Travel Blog</Link></Button>
+            <Button className="mx-2" variant="danger"> <Link className="m-2 p-5 text-decoration-none text-light" to="/addtravelblog">Add Travel Blog</Link></Button>
 
 
 

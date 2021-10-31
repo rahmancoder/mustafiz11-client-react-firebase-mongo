@@ -1,15 +1,17 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import GalleryImage from '../GalleryImage/GalleryImage';
+import TravelList from '../TravelList/TravelList';
 import Vacation from '../Vacation/Vacation';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is Home render four plus two extra section here</h1>
+            <h1 className="text-danger">Best Travel Plan and Tours</h1>
             <Banner></Banner>
-            <Vacation></Vacation>
+            <TravelList></TravelList>
             <GalleryImage></GalleryImage>
+            <Vacation></Vacation>
 
         </div>
     );

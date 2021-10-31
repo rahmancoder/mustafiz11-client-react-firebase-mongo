@@ -14,7 +14,7 @@ const TravelList = () => {
     }, [])
 
     return (
-        <div className="text-center">
+        <div className="text-center container mt-4">
 
             <div className="text-center">
                 <h1 className="text-danger"> Choose your Travel List</h1>

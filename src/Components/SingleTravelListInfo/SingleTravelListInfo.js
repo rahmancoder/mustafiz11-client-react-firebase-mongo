@@ -28,11 +28,11 @@ const SingleTravelListInfo = () => {
 
     return (
         <div className="text-center">
-            <h2 className="text-danger">Service Index: {travelId}</h2>
+            <h2 className="text-danger">Travel Index: {travelId}</h2>
 
-            <h2 className="text-success">Service Name: {traveldetails[travelId]?.Travel_destination
+            <h2 className="text-success">Travel Destination: {traveldetails[travelId]?.Travel_destination
             }</h2>
-            <h2 className="text-warning">About This Service- {traveldetails[travelId]?.travel_description}</h2>
+            <h2 className="text-warning">About This Travel- {traveldetails[travelId]?.travel_description}</h2>
             <img src={traveldetails[travelId]?.picture} alt="" />
 
             <div className="mt-3">
