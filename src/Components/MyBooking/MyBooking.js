@@ -15,20 +15,28 @@ const MyBooking = () => {
         fetch("http://localhost:5000/booking")
             .then((res) => res.json())
             .then((data) => setMyallbooking(data));
+        // .then((data) => {
+        //     setMyallbooking(data)
+        //     const found = myallbooking.filter(d => d.userEmail == user?.email)
+        //     console.log('found', found);
+        // });
 
 
     }, []);
 
 
     //  This will work with Firebase Authentication and then it will filter out from there
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     // if (data.userEmail == user?.email)
-    //     const found = myallbooking.filter(d => d.userEmail == user?.email)
-    //     console.log('found', found);
+        // if (data.userEmail == user?.email)
+        const found = myallbooking.filter(d => d.userEmail == user?.email)
+        console.log('found', found);
+        setMyallbooking(found);
 
 
-    // }, [user.email])
+    }, [])
+    // [user.email])
+    //  [myallbooking, setMyallbooking])
 
 
     // DELETE A Privious My Booking
@@ -55,9 +63,10 @@ const MyBooking = () => {
 
     return (
         <div className="container">
-            <h3>User email will filter the user all booking here, He can see his all Bookings/ Indivitual booking</h3>
+            <h3>Show Indivitual User Booking Information</h3>
 
-            <h1>My ALL Booking {myallbooking?.length}</h1>
+            <h1>My ALL Booking {myallbooking?.length} </h1>
+            {/* <h1>My ALL Booking {found?.length}</h1> */}
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -68,18 +77,40 @@ const MyBooking = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
-                {myallbooking?.map((pd, index) => (
-                    <tbody>
-                        <tr>
-                            <td>{index}</td>
-                            <td>{pd?.DestinationName}</td>
-                            <td>{pd?.userEmail}</td>
-                            <td>{pd?.description}</td>
-                            {/* <button className="btn bg-warning">Delete</button> */}
-                            <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button>
-                        </tr>
-                    </tbody>
-                ))}
+
+
+
+
+                <tbody>
+            {/* <tr> */}
+            {/* <td>{myallbooking.index}</td> */}
+            {/* <td>{myallbooking[0]?.DestinationName}</td> */}
+            {/* <td>{myallbooking?.DestinationName}</td> */}
+            {/* <td>{myallbooking[0]?.userEmail}</td> */}
+            {/* <td>{myallbooking?.description}</td> */}
+            {/* <button className="btn bg-warning">Delete</button> */}
+            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
+
+            {/* <td>{ }</td>
+                        <td>{myallbooking?.found.DestinationName}</td>
+                        <td>{found[userEmail]}</td>
+                        <td>{myallbooking?.found.description}</td> */}
+            {/* </tr> */}
+            {/* </tbody> */}
+
+            {manageallbooking?.map((pd, index) => (
+                <tbody>
+                <tr>
+                <td>{index}</td>
+                <td>{pd?.DestinationName}</td>
+                <td>{pd?.userEmail}</td>
+                <td>{pd?.description}</td>
+                <button className="btn bg-warning">Delete</button>
+            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
+                </tr>
+                </tbody>
+            ))}
+
             </Table>
 
 
