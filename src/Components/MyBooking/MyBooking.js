@@ -80,36 +80,36 @@ const MyBooking = () => {
 
 
 
+                {/* 
+                <tbody> */}
+                {/* <tr> */}
+                {/* <td>{myallbooking.index}</td> */}
+                {/* <td>{myallbooking[0]?.DestinationName}</td> */}
+                {/* <td>{myallbooking?.DestinationName}</td> */}
+                {/* <td>{myallbooking[0]?.userEmail}</td> */}
+                {/* <td>{myallbooking?.description}</td> */}
+                {/* <button className="btn bg-warning">Delete</button> */}
+                {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
 
-                <tbody>
-            {/* <tr> */}
-            {/* <td>{myallbooking.index}</td> */}
-            {/* <td>{myallbooking[0]?.DestinationName}</td> */}
-            {/* <td>{myallbooking?.DestinationName}</td> */}
-            {/* <td>{myallbooking[0]?.userEmail}</td> */}
-            {/* <td>{myallbooking?.description}</td> */}
-            {/* <button className="btn bg-warning">Delete</button> */}
-            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
-
-            {/* <td>{ }</td>
+                {/* <td>{ }</td>
                         <td>{myallbooking?.found.DestinationName}</td>
                         <td>{found[userEmail]}</td>
                         <td>{myallbooking?.found.description}</td> */}
-            {/* </tr> */}
-            {/* </tbody> */}
+                {/* </tr> */}
+                {/* </tbody> */}
 
-            {manageallbooking?.map((pd, index) => (
-                <tbody>
-                <tr>
-                <td>{index}</td>
-                <td>{pd?.DestinationName}</td>
-                <td>{pd?.userEmail}</td>
-                <td>{pd?.description}</td>
-                <button className="btn bg-warning">Delete</button>
-            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
-                </tr>
-                </tbody>
-            ))}
+                {myallbooking?.map((pd, index) => (
+                    <tbody>
+                        <tr>
+                            <td>{index}</td>
+                            <td>{pd?.DestinationName}</td>
+                            <td>{pd?.userEmail}</td>
+                            <td>{pd?.description}</td>
+                            <button className="btn bg-warning">Delete</button>
+                            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
+                        </tr>
+                    </tbody>
+                ))}
 
             </Table>
 
