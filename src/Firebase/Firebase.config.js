@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBCjUr5Pn7yDBiQAoP6Hr9iCTlscMrWPQw",
-    authDomain: "mustafiz-tourism-website.firebaseapp.com",
-    projectId: "mustafiz-tourism-website",
-    storageBucket: "mustafiz-tourism-website.appspot.com",
-    messagingSenderId: "177924358770",
-    appId: "1:177924358770:web:a4c0ddecb4d971b724b8eb"
+     apiKey: process.env.REACT_APP_API_KEY,
+     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+     projectId: process.env.REACT_APP_PROJECT_ID,
+     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+     appId: process.env.REACT_APP_APP_ID,
 };
 
 export default firebaseConfig;
